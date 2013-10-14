@@ -21,7 +21,7 @@ let g:used_javascript_libs = 'underscore,backbone,angular'
 " autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
 " ###################### custom settings 
 set et
-set mouse=a
+" set mouse=a
 set nocompatible    " use vim defaults
 set ls=2            " allways show status line
 set tabstop=4       " numbers of spaces of tab character
@@ -55,3 +55,18 @@ set wildignore=*.o,*.obj,*.bak,*.exe,*.pyc,*.DS_Store,*.db
 set smartindent
 set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\ [%l,%v--%L\ (%p%%)\ HEX=\%02.2B\ BIN=\%08.8b]
 " ###################### custom settings 
+au FileType ruby set sw=2 ts=2
+" ###################### 
+" paste
+function! IndentPasteOff()
+  set noai nocin nosi inde=
+endfunction
+
+function! IndentPasteOn()
+  set ai cin si
+endfunction
+
+nmap _0  :call IndentPasteOff()<CR> 
+nmap _1  :call IndentPasteOn()<CR> 
+"
+set pastetoggle=<F2>
