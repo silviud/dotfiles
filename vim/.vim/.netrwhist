@@ -1,3 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/home/silviud/.vim/bundle/javascript-libraries-syntax.vim'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/silviud/PROGS/RUBY/cookbooks/wrap_supervisord'
+let g:netrw_dirhist_2='/home/silviud/PROGS/PYTHON/pingrobot-django/pingrobot/demo_payment'
+let g:netrw_dirhist_3='/home/silviud/PROGS/PYTHON/pingrobot-django/ops/requirements'
+let g:netrw_dirhist_4='/home/silviud/PROGS/PYTHON/devops/librarian/cookbooks'
+let g:netrw_dirhist_5='/home/silviud/PROGS/PYTHON/devops/ansible/provisioning'
+let g:netrw_dirhist_6='/home/silviud/PROGS/PYTHON/pingrobot-django/ops/ops/apps/dash/views'

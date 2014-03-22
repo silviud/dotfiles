@@ -8,8 +8,7 @@ call pathogen#helptags()
 filetype on
 filetype plugin indent on
 filetype plugin on
-" let g:pymode_lint_write = 0
-let g:pymode_rope = 1
+let g:pymode_rope = 0
 
 " Documentation
 let g:pymode_doc = 1
@@ -18,8 +17,10 @@ let g:pymode_doc_key = 'K'
 " "Linting
 let g:pymode_lint = 1
 let g:pymode_lint_checker = "pyflakes,pep8"
+"
+let g:pymode_lint_on_fly = 1
 " Auto check on save
-let g:pymode_lint_write = 1
+let g:pymode_lint_write = 0
 "
 " " Support virtualenv
 let g:pymode_virtualenv = 1
@@ -40,13 +41,13 @@ let g:pymode_folding = 0
 syntax on
 " javascript 
 " https://github.com/othree/javascript-libraries-syntax.vim
-let g:used_javascript_libs = 'angular'
+" let g:used_javascript_libs = 'angular'
 " use https://github.com/MarcWeber/vim-addon-local-vimrc
-" autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
-" autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 1
 " autocmd BufReadPre *.js let b:javascript_lib_use_backbone = 1
 " autocmd BufReadPre *.js let b:javascript_lib_use_prelude = 0
 " autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
+autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
+autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 1
 " ###################### custom settings 
 set et
 " set mouse=a
@@ -81,9 +82,13 @@ set undolevels=200
 set cpoptions=$cF
 set wildignore=*.o,*.obj,*.bak,*.exe,*.pyc,*.DS_Store,*.db
 set smartindent
+set tags=.tags,tags,.tags_python
 set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\ [%l,%v--%L\ (%p%%)\ HEX=\%02.2B\ BIN=\%08.8b]
 " ###################### custom settings 
+au BufRead,BufNewFile *.ejs set filetype=javascript
 au FileType ruby set sw=2 ts=2
+au FileType javascript set sw=2 ts=2
+au FileType html set sw=2 ts=2
 " ###################### 
 " paste
 function! IndentPasteOff()
@@ -101,3 +106,7 @@ set pastetoggle=<F2>
 
 map <C-right> <ESC>:bn<CR>
 map <C-left> <ESC>:bp<CR>
+" map _2 :!ctags -R -f ./tags $VIRTUAL_ENV/lib/python2.7/site-packages<CR>
+map _2 :!ctags -R -f ./tags `python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"`<CR>
+" tagbar
+nmap <F8> :TagbarToggle<CR>
