@@ -8,7 +8,7 @@ call pathogen#helptags()
 filetype on
 filetype plugin indent on
 filetype plugin on
-let g:pymode_rope = 0
+let g:pymode_rope = 1
 
 " Documentation
 let g:pymode_doc = 1
@@ -84,6 +84,7 @@ set wildignore=*.o,*.obj,*.bak,*.exe,*.pyc,*.DS_Store,*.db
 set smartindent
 set tags=.tags,tags,.tags_python
 set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\ [%l,%v--%L\ (%p%%)\ HEX=\%02.2B\ BIN=\%08.8b]
+colorscheme evening
 " ###################### custom settings 
 au BufRead,BufNewFile *.ejs set filetype=javascript
 au FileType ruby set sw=2 ts=2
