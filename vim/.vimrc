@@ -84,7 +84,7 @@ set undolevels=200
 set cpoptions=$cF
 set wildignore=*.o,*.obj,*.bak,*.exe,*.pyc,*.DS_Store,*.db
 set smartindent
-set tags=.tags,tags,.tags_python
+set tags=.tags,tags,.tags_python,.gemtags
 set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\ [%l,%v--%L\ (%p%%)\ HEX=\%02.2B\ BIN=\%08.8b]
 colorscheme evening
 " ###################### custom settings 
@@ -93,6 +93,8 @@ au FileType ruby set sw=2 ts=2
 au FileType javascript set sw=2 ts=2
 au FileType html set sw=2 ts=2
 " ###################### 
+" chef
+au FileType ruby,eruby set filetype=ruby.eruby.chef
 " paste
 function! IndentPasteOff()
   set noai nocin nosi inde=
