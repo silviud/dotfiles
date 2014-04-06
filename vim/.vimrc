@@ -33,6 +33,7 @@ Plugin 'nvie/vim-flake8'
 Plugin 'tpope/vim-ragtag'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
+Bundle "jQuery"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin indent on
