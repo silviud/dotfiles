@@ -1,3 +1,13 @@
+" http://files.swaroopch.com/vim/byte_of_vim_v051.pdf
+"
+"
+" function todo()
+" python <<EOF
+" import vim  # vim py api
+" print TODO
+" EOF
+" endfunction
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
