@@ -121,7 +121,8 @@ set wildignore=*.o,*.obj,*.bak,*.exe,*.pyc,*.DS_Store,*.db
 set smartindent
 set tags=.tags,tags,.tags_python,.gemtags
 set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\ [%l,%v--%L\ (%p%%)\ HEX=\%02.2B\ BIN=\%08.8b]
-colorscheme evening
+colorscheme desert
+syntax enable
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
