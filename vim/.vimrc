@@ -56,7 +56,14 @@ let g:jedi#use_tabs_not_buffers = 0
 let g:jedi#popup_on_dot = 0
 let g:jedi#auto_close_doc = 1
 " syntastics
+"
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_jump=1
+let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+" checkers
 let g:syntastic_python_checkers = ['pyflakes']
+" jshint
+let g:syntastic_javascript_checkers = ['jshint']
 "
 autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
 au BufRead,BufNewFile *.ejs set filetype=javascript
