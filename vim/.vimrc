@@ -1,3 +1,13 @@
+" http://files.swaroopch.com/vim/byte_of_vim_v051.pdf
+"
+"
+" function todo()
+" python <<EOF
+" import vim  # vim py api
+" print TODO
+" EOF
+" endfunction
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -47,7 +57,14 @@ let g:jedi#use_tabs_not_buffers = 0
 let g:jedi#popup_on_dot = 0
 let g:jedi#auto_close_doc = 1
 " syntastics
+"
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_jump=1
+let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+" checkers
 let g:syntastic_python_checkers = ['pyflakes']
+" jshint
+let g:syntastic_javascript_checkers = ['jshint']
 "
 autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
 au BufRead,BufNewFile *.ejs set filetype=javascript
@@ -112,7 +129,10 @@ set wildignore=*.o,*.obj,*.bak,*.exe,*.pyc,*.DS_Store,*.db
 set smartindent
 set tags=.tags,tags,.tags_python,.gemtags
 set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\ [%l,%v--%L\ (%p%%)\ HEX=\%02.2B\ BIN=\%08.8b]
-colorscheme evening
+syntax match nonascii "[^\x00-\x7F]"
+highlight nonascii guibg=Red ctermbg=2
+colorscheme desert
+syntax enable
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
