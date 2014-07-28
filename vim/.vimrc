@@ -94,7 +94,7 @@ nmap <F8> :TagbarToggle<CR>
 set viewdir=$HOME/.vim/views
 set sessionoptions=folds
 set et
-" set mouse=a
+set mouse=a
 set nocompatible    " use vim defaults
 set ls=2            " allways show status line
 set tabstop=4       " numbers of spaces of tab character
