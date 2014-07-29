@@ -95,7 +95,7 @@ nmap <F8> :TagbarToggle<CR>
 set viewdir=$HOME/.vim/views
 set sessionoptions=folds
 set et
-set set foldmethod=indent "http://www.linux.com/learn/tutorials/442438-vim-tips-folding-fun
+set foldmethod=indent
 set mouse=a
 set nocompatible    " use vim defaults
 set ls=2            " allways show status line
