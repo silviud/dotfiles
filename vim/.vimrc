@@ -134,7 +134,7 @@ syntax match nonascii "[^\x00-\x7F]"
 highlight nonascii guibg=Red ctermbg=2
 colorscheme desert
 syntax enable
-
+map <2-LeftMouse> za
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 au FileType ruby set sw=2 ts=2
