@@ -44,6 +44,7 @@ Plugin 'tpope/vim-ragtag'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 Plugin 'Shougo/neocomplcache.vim'
+Plugin 'terryma/vim-multiple-cursors'
 Bundle "jQuery"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -96,7 +97,7 @@ set viewdir=$HOME/.vim/views
 set sessionoptions=folds
 set et
 set foldmethod=indent
-set mouse=a
+" set mouse=a
 set nocompatible    " use vim defaults
 set ls=2            " allways show status line
 set tabstop=4       " numbers of spaces of tab character
