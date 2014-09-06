@@ -26,7 +26,8 @@ call vundle#rc()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'gmarik/vundle'  " required by vundle
 Plugin 'tpope/vim-fugitive'
-" Plugin 'vim-scripts/closetags'
+"Plugin 'vim-scripts/closetags' not found 
+Plugin 'vim-scripts/autoclose'
 Plugin 'kien/ctrlp.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'tomtom/tlib_vim'   " snipmate
