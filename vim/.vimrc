@@ -1,13 +1,3 @@
-" http://files.swaroopch.com/vim/byte_of_vim_v051.pdf
-"
-"
-" function todo()
-" python <<EOF
-" import vim  # vim py api
-" print TODO
-" EOF
-" endfunction
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -45,6 +35,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 Plugin 'Shougo/neocomplcache.vim'
 Bundle "jQuery"
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'scrooloose/syntastic'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin indent on
@@ -57,14 +49,11 @@ let g:jedi#use_tabs_not_buffers = 0
 let g:jedi#popup_on_dot = 0
 let g:jedi#auto_close_doc = 1
 " syntastics
-"
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_jump=1
-let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
-" checkers
-let g:syntastic_python_checkers = ['pyflakes']
-" jshint
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_python_checkers = ['pylint']
 "
 autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
 au BufRead,BufNewFile *.ejs set filetype=javascript
@@ -129,16 +118,18 @@ set wildignore=*.o,*.obj,*.bak,*.exe,*.pyc,*.DS_Store,*.db
 set smartindent
 set tags=.tags,tags,.tags_python,.gemtags
 set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\ [%l,%v--%L\ (%p%%)\ HEX=\%02.2B\ BIN=\%08.8b]
-syntax match nonascii "[^\x00-\x7F]"
-highlight nonascii guibg=Red ctermbg=2
-colorscheme desert
-syntax enable
+" syntastics
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+colorscheme evening
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 au FileType ruby set sw=2 ts=2
-au FileType javascript set sw=2 ts=2
-au FileType html set sw=2 ts=2
+" au FileType javascript set sw=2 ts=2
+" au FileType html set sw=2 ts=2
 " chef
 au FileType ruby,eruby set filetype=ruby.eruby.chef
 
@@ -154,3 +145,7 @@ let g:neocomplcache_enable_smart_case = 1
 " Set minimum syntax keyword length.
 let g:neocomplcache_min_syntax_length = 3
 let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+
+" linting python - choosed syntastic
+" autocmd FileType python set makeprg=pylint\ --reports=n\ --msg-template=\"{path}:{line}:\ {msg_id}\ {symbol},\ {obj}\ {msg}\"\ %:p
+" autocmd FileType python set errorformat=%f:%l:\ %m
