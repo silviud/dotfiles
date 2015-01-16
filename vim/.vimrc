@@ -29,11 +29,12 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'kana/vim-textobj-user'
 Plugin 'vim-scripts/django-template-textobjects'
 Plugin 'scrooloose/nerdtree'
-Plugin 'nvie/vim-flake8'
+" Plugin 'nvie/vim-flake8'
 Plugin 'tpope/vim-ragtag'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 Plugin 'Shougo/neocomplcache.vim'
+Plugin 'terryma/vim-multiple-cursors'
 Bundle "jQuery"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -79,6 +80,7 @@ nmap <F8> :TagbarToggle<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Settings 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+syntax enable
 set viewdir=$HOME/.vim/views
 set sessionoptions=folds
 set et
@@ -121,7 +123,7 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-"colorscheme evening
+colorscheme elflord
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
