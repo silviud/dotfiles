@@ -35,8 +35,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 Plugin 'Shougo/neocomplcache.vim'
 Bundle "jQuery"
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'scrooloose/syntastic'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin indent on
@@ -123,7 +121,7 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-colorscheme evening
+"colorscheme evening
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
