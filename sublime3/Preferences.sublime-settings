@@ -1,23 +1,27 @@
 {
+	"bold_folder_labels": true,
+	"caret_style": "wide",
 	"color_scheme": "Packages/User/SublimeLinter/Blackboard (SL).tmTheme",
+	"draw_indent_guides": false,
+	"ensure_newline_at_eof_on_save": true,
+	"font_face": "Monaco",
 	"font_size": 11,
-    "font_face": "Monaco",
+	"gutter": true,
+	"highlight_line": true,
 	"ignored_packages":
 	[
-		""
+		"SublimeCodeIntel"
 	],
+	"indent_guide_options":
+	[
+		"draw_active"
+	],
+	"rulers":
+	[
+		80
+	],
+	"show_encoding": true,
+	"show_full_path": true,
 	"translate_tabs_to_spaces": true,
-    "highlight_line": true,
-    // "line_padding_bottom": 1,
-    // "line_padding_top": 1,
-    "gutter": true,
-    "caret_style": "wide",
-    "draw_indent_guides": false,
-    "indent_guide_options": ["draw_active"],
-    "trim_trailing_white_space_on_save": true,
-    "ensure_newline_at_eof_on_save": true,
-    "show_encoding": true,
-    "bold_folder_labels": true,
-    "rulers": [80],
-    "show_full_path": true
+	"trim_trailing_white_space_on_save": true
 }
