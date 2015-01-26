@@ -54,6 +54,13 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_python_checkers = ['pylint']
 "
+" As Sublime - doesnt map ALT(Meta)
+" let g:multi_cursor_use_default_mapping=0
+" let g:multi_cursor_next_key='<M-d>'
+" let g:multi_cursor_prev_key='<M-u>'
+" let g:multi_cursor_skip_key='<M-x C-d>'
+" let g:multi_cursor_quit_key='<Esc>'
+"
 autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
 au BufRead,BufNewFile *.ejs set filetype=javascript
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -123,7 +130,7 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-colorscheme elflord
+colorscheme evening
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
