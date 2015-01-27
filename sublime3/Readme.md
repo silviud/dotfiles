@@ -21,4 +21,7 @@ sublimecodeintel
 pyv8 (maybe pylinter installed)
 rubylinter (plugin for sublimelinter)
 
+## Commands
 
+http://www.sublimetext.com/docs/commands
+http://sublime-text-unofficial-documentation.readthedocs.org/en/latest/extensibility/command_palette.html
