@@ -136,6 +136,10 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 colorscheme evening
+" cursor line
+hi CursorLine cterm=NONE ctermbg=gray ctermfg=white guibg=gray guifg=white
+hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
