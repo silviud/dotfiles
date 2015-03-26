@@ -1,4 +1,5 @@
 [
     { "keys": ["super+shift+up"], "command": "select_lines", "args": {"forward": false} },
-    { "keys": ["super+shift+down"], "command": "select_lines", "args": {"forward": true} }
+    { "keys": ["super+shift+down"], "command": "select_lines", "args": {"forward": true} },
+    { "keys": ["shift+super+g"], "command": "find_under_prev" }
 ]
