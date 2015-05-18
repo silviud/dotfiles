@@ -1,0 +1,12 @@
+termcapinfo xterm* ti@:te@
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d'
+# Default screens
+screen 0
+select 0
+screen -t sh1        1   
+screen -t sh2        2   
+# # exec ssh-agent | head -2 | cut -d\; -f1 | sed s/^/setenv\ / | sed s/=/\ /  > $HOME/.ssh/screen_agent
+# exec $HOME/.ssh/screen_agent_bin.sh
+# exec true
+# source $HOME/.ssh/screen_agent
