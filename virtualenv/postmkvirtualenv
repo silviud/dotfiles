@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+# file: ~/.virtualenvs/postmkvirtualenv
+
+# This hook is run after a new virtualenv is activated.
+
+# setup python interpretor and sitepackages 
+# for Sublime Text's SublimeCodeIntel plugin.
+# codeintel looks in the root of any folder opened via `subl foldername`
+# for foldername/.codeintel/config
+# it also looks in ~/.codeintel/config
+# so we need to override that one when creating a virtualenv
+
+setup_sublimecodeintel() {
+    projectdir="$1"
+    if [ -z $projectdir ]
+    then
+        projectfile=$VIRTUAL_ENV/$VIRTUALENVWRAPPER_PROJECT_FILENAME
+        if [ ! -f "$projectfile" ]
+        then
+            return 0
+        fi
+        projectdir=`cat "$projectfile"`
+    fi
+    if [ ! -d "$projectdir" ]
+    then 
+        echo 'project dir not found'
+        return 1
+    fi
+    if [ ! -d "$projectdir"/.codeintel ]
+    then
+        mkdir "$projectdir"/.codeintel
+    fi
+    pythonbin=`which python`
+    site_packages=`"$pythonbin" -c "import distutils.sysconfig; print(distutils.sysconfig.get_python_lib())"`
+    if [ -e "$projectdir"/.codeintel/config ]
+    then
+        echo "Code intel file already exists. Bailing out. You can update it with:"
+        echo python binary: $pythonbin
+        echo site packages: $site_packages
+        return 1
+    fi 
+    #site_packages="`virtualenvwrapper_get_site_packages_dir`"
+    echo creating $projectdir/.codeintel/config
+    echo python binary: $pythonbin
+    echo site packages: $site_packages
+    cat > $projectdir/.codeintel/config <<EOF
+{
+    "Python": {
+        "python": '$pythonbin',
+        "pythonExtraPaths": ['$site_packages']
+    },
+}
+EOF
+}
+
+setup_sublimecodeintel $@
