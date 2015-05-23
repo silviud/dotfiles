@@ -122,12 +122,21 @@ set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\ [%l,%v--%L\ (%p%%)\ HEX=\%02.2B\ B
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+set wildmenu
+set cursorline
+" folding
+set foldenable
+set foldlevelstart=10
+set foldnestmax=10
+set foldmethod=indent
 
 colorscheme elflord
 " cursor line
 hi CursorLine   cterm=NONE ctermbg=232 ctermfg=white guibg=darkred guifg=white
 hi CursorColumn cterm=NONE ctermbg=232 ctermfg=white guibg=darkred guifg=white
-nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+nnoremap <Leader>c :set cursorline! <CR>
+nnoremap <Leader>cc :set cursorcolumn!<CR>
+nnoremap <space> za
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
