@@ -68,8 +68,13 @@ endfunction
 
 nmap _0  :call IndentPasteOff()<CR> 
 nmap _1  :call IndentPasteOn()<CR> 
+
+" paste with indent
+nnoremap _p :set invpaste paste?<CR>
+set pastetoggle=_p
+set showmode
 "
-set pastetoggle=<F2>
+" set pastetoggle=<F2>
 
 map <C-right> <ESC>:bn<CR>
 map <C-left> <ESC>:bp<CR>
