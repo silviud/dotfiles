@@ -70,8 +70,8 @@ nmap _0  :call IndentPasteOff()<CR>
 nmap _1  :call IndentPasteOn()<CR> 
 
 " paste with indent
-nnoremap _p :set invpaste paste?<CR>
-set pastetoggle=_p
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
 set showmode
 "
 " set pastetoggle=<F2>
