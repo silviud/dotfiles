@@ -1,4 +1,4 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible              " be iMproved, required
@@ -35,6 +35,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 Plugin 'Shougo/neocomplcache.vim'
 Plugin 'terryma/vim-multiple-cursors'
+Bundle 'https://github.com/neilagabriel/vim-geeknote'
 Bundle "jQuery"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
