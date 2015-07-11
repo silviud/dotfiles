@@ -35,7 +35,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 Plugin 'Shougo/neocomplcache.vim'
 Plugin 'terryma/vim-multiple-cursors'
-Bundle 'https://github.com/neilagabriel/vim-geeknote'
+" Bundle 'https://github.com/neilagabriel/vim-geeknote'
 Bundle "jQuery"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
