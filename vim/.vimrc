@@ -153,6 +153,8 @@ au FileType ruby set sw=2 ts=2
 " chef
 au FileType ruby,eruby set filetype=ruby.eruby.chef
 
+au BufRead,BufNewFile *.pt set filetype=html
+au FileType html set sw=2 ts=2 smartindent 
 
 " neocomplcache
 "Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
