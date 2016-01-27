@@ -142,7 +142,7 @@ colorscheme elflord
 hi CursorLine   cterm=NONE ctermbg=232 ctermfg=white guibg=darkred guifg=white
 hi CursorColumn cterm=NONE ctermbg=232 ctermfg=white guibg=darkred guifg=white
 nnoremap <Leader>c :set cursorline! <CR>
-nnoremap <Leader>cc :set cursorcolumn!<CR>
+nnoremap <Leader>ca :set cursorcolumn!<CR>
 nnoremap <space> za
 
 
@@ -155,6 +155,8 @@ au FileType ruby,eruby set filetype=ruby.eruby.chef
 
 au BufRead,BufNewFile *.pt set filetype=html
 au FileType html set sw=2 ts=2 smartindent 
+au FileType python set sw=4 ts=4 smartindent
+au FileType django set sw=4 ts=4 smartindent
 
 " neocomplcache
 "Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
