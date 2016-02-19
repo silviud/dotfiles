@@ -35,6 +35,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 Plugin 'Shougo/neocomplcache.vim'
 Plugin 'terryma/vim-multiple-cursors'
+" Plugin 'tmhedberg/SimpylFold'
 " Bundle 'https://github.com/neilagabriel/vim-geeknote'
 Plugin 'scrooloose/nerdcommenter'
 Bundle "jQuery"
@@ -90,12 +91,9 @@ nmap <F8> :TagbarToggle<CR>
 syntax enable
 set viewdir=$HOME/.vim/views
 set sessionoptions=folds
-set et
 " set mouse=a
 set nocompatible    " use vim defaults
 set ls=2            " allways show status line
-set tabstop=4       " numbers of spaces of tab character
-set shiftwidth=4    " numbers of spaces to (auto)indent
 set scrolloff=3     " keep 3 lines when scrolling
 set showcmd         " display incomplete commands
 set hlsearch        " highlight searches
@@ -122,7 +120,6 @@ set whichwrap=b,s,h,l,<,>,[,]   " move freely between files
 set undolevels=200
 set cpoptions=$cF
 set wildignore=*.o,*.obj,*.bak,*.exe,*.pyc,*.DS_Store,*.db
-set smartindent
 set tags=.tags,tags,.tags_python,.gemtags
 set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\ [%l,%v--%L\ (%p%%)\ HEX=\%02.2B\ BIN=\%08.8b]
 " syntastics
@@ -133,16 +130,31 @@ set wildmenu
 set cursorline
 " folding
 set foldenable
-set foldlevelstart=10
-set foldnestmax=10
+"set foldlevelstart=1
+set foldlevel=1
+"set foldnestmax=10
 set foldmethod=indent
+" configure expanding of tabs for various file types
+au BufRead,BufNewFile *.c set noexpandtab
+au BufRead,BufNewFile *.h set noexpandtab
+au BufRead,BufNewFile Makefile* set noexpandtab
+
+" --------------------------------------------------------------------------------
+set expandtab           " enter spaces when tab is pressed
+set textwidth=120       " break lines when line length increases
+set tabstop=4           " use 4 spaces to represent tab
+set softtabstop=4
+set shiftwidth=4        " number of spaces to use for auto indent
+set autoindent          " copy indent from current line when starting a new line
+set smartindent
+
 
 colorscheme elflord
 " cursor line
 hi CursorLine   cterm=NONE ctermbg=232 ctermfg=white guibg=darkred guifg=white
 hi CursorColumn cterm=NONE ctermbg=232 ctermfg=white guibg=darkred guifg=white
 nnoremap <Leader>c :set cursorline! <CR>
-nnoremap <Leader>ca :set cursorcolumn!<CR>
+nnoremap <Leader>CC :set cursorcolumn!<CR>
 nnoremap <space> za
 
 
@@ -155,8 +167,6 @@ au FileType ruby,eruby set filetype=ruby.eruby.chef
 
 au BufRead,BufNewFile *.pt set filetype=html
 au FileType html set sw=2 ts=2 smartindent 
-au FileType python set sw=4 ts=4 smartindent
-au FileType django set sw=4 ts=4 smartindent
 
 " neocomplcache
 "Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
