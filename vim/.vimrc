@@ -55,7 +55,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
-let g:syntastic_python_checkers = ['pyflakes']
+let g:syntastic_python_checkers = ['flake8']
 "
 autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
 au BufRead,BufNewFile *.ejs set filetype=javascript
