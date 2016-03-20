@@ -38,6 +38,8 @@ Plugin 'terryma/vim-multiple-cursors'
 " Plugin 'tmhedberg/SimpylFold'
 " Bundle 'https://github.com/neilagabriel/vim-geeknote'
 Plugin 'scrooloose/nerdcommenter'
+Bundle 'flazz/vim-colorschemes'
+" Bundle 'ntpeters/vim-better-whitespace' TODO
 Bundle "jQuery"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -148,8 +150,9 @@ set shiftwidth=4        " number of spaces to use for auto indent
 set autoindent          " copy indent from current line when starting a new line
 set smartindent
 
-
-colorscheme elflord
+" terminal install ncurses-term
+" bashrc  export TERM=xterm-256color
+colorscheme xoria256
 " cursor line
 hi CursorLine   cterm=NONE ctermbg=232 ctermfg=white guibg=darkred guifg=white
 hi CursorColumn cterm=NONE ctermbg=232 ctermfg=white guibg=darkred guifg=white

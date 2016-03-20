@@ -1,12 +1,36 @@
-termcapinfo xterm* ti@:te@
-hardstatus alwayslastline
-hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d'
+# termcapinfo xterm* ti@:te@
+# hardstatus alwayslastline
+# hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d'
 # Default screens
-screen 0
-select 0
-screen -t sh1        1   
-screen -t sh2        2   
+# screen 0
+# select 0
+# screen -t sh1        1   
+# screen -t sh2        2   
 # # exec ssh-agent | head -2 | cut -d\; -f1 | sed s/^/setenv\ / | sed s/=/\ /  > $HOME/.ssh/screen_agent
 # exec $HOME/.ssh/screen_agent_bin.sh
 # exec true
 # source $HOME/.ssh/screen_agent
+
+# backtick 1 5 5 true
+# termcapinfo rxvt* 'hs:ts=\E]2;:fs=\007:ds=\E]2;\007'
+# hardstatus string "screen (%n: %t)"
+# caption string "%{= kw}%Y-%m-%d;%c %{= kw}%-Lw%{= kG}%{+b}[%n %t]%{-b}%{= kw}%+Lw%1`"
+# caption always
+# windowlist string "%4n %t $PWD"
+#
+
+shelltitle "$ |bash" # make screen assign window titles automatically
+# hardstatus alwayslastline "%w" # show all window titles at bottom line of term
+hardstatus alwayslastline
+hardstatus string '%{gk}[ %{G}%H %{g}][%= %{wk}%?%-Lw%?%{=b kR} (%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?%+Lw%?%?%= %{g}][%{Y}%l%{g}] %{=b C}[ %m/%d %c ]%{W}'
+
+# terminfo and termcap for nice 256 color terminal
+# allow bold colors - necessary for some reason
+attrcolor b ".I"
+# tell screen how to set colors. AB = background, AF=foreground
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+# erase background with current bg color
+defbce "on" 
+# set TERM
+# term screen-256color-bce
+term screen-256color-bce-s^\
