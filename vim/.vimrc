@@ -39,6 +39,7 @@ Plugin 'terryma/vim-multiple-cursors'
 " Bundle 'https://github.com/neilagabriel/vim-geeknote'
 Plugin 'scrooloose/nerdcommenter'
 Bundle 'flazz/vim-colorschemes'
+Bundle 'majutsushi/tagbar'
 " Bundle 'ntpeters/vim-better-whitespace' TODO
 Bundle "jQuery"
 
