@@ -78,6 +78,17 @@ nmap _1  :call IndentPasteOn()<CR>
 nnoremap <C-\> :set invpaste paste?<CR>
 set pastetoggle=<C-\>
 set showmode
+
+" javascript
+command! UnMinify call UnMinify()
+function! UnMinify()
+    %s/{\ze[^\r\n]/{\r/g
+    %s/){/) {/g
+    %s/};\?\ze[^\r\n]/\0\r/g
+    %s/;\ze[^\r\n]/;\r/g
+    %s/[^\s]\zs[=&|]\+\ze[^\s]/ \0 /g
+    normal ggVG=
+endfunction
 "
 " set pastetoggle=<F2>
 
@@ -135,7 +146,7 @@ set foldenable
 "set foldlevelstart=1
 set foldlevel=1
 "set foldnestmax=10
-set foldmethod=indent
+set foldmethod=manual
 " configure expanding of tabs for various file types
 au BufRead,BufNewFile *.c set noexpandtab
 au BufRead,BufNewFile *.h set noexpandtab
