@@ -12,3 +12,5 @@ function decrypt(){
     file=$1
     openssl enc -aes-256-cbc -d -in ${file}.enc -out ${file}
 }
+
+alias psc='ps xawf -eo pid,user,cgroup,args'
