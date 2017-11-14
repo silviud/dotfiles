@@ -23,9 +23,9 @@ Plugin 'tomtom/tlib_vim'   " snipmate
 Plugin 'MarcWeber/vim-addon-mw-utils'  " snipmate
 Plugin 'garbas/vim-snipmate'  " snipmate
 Plugin 'honza/vim-snippets'  " snipmate
-Plugin 'vadv/vim-chef'
+" Plugin 'vadv/vim-chef'
 Plugin 'gregsexton/MatchTag'
-Plugin 'vim-ruby/vim-ruby'
+" Plugin 'vim-ruby/vim-ruby'
 Plugin 'kana/vim-textobj-user'
 Plugin 'vim-scripts/django-template-textobjects'
 Plugin 'scrooloose/nerdtree'
@@ -40,8 +40,9 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/nerdcommenter'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'majutsushi/tagbar'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " Bundle 'ntpeters/vim-better-whitespace' TODO
-Bundle "jQuery"
+" Bundle "jQuery"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin indent on
