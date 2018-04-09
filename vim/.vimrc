@@ -16,33 +16,33 @@ call vundle#rc()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'gmarik/vundle'  " required by vundle
 Plugin 'tpope/vim-fugitive'
-" Plugin 'vim-scripts/closetags'
 Plugin 'kien/ctrlp.vim'
 Plugin 'davidhalter/jedi-vim'
-Plugin 'tomtom/tlib_vim'   " snipmate
-Plugin 'MarcWeber/vim-addon-mw-utils'  " snipmate
-Plugin 'garbas/vim-snipmate'  " snipmate
-Plugin 'honza/vim-snippets'  " snipmate
-" Plugin 'vadv/vim-chef'
 Plugin 'gregsexton/MatchTag'
-" Plugin 'vim-ruby/vim-ruby'
-Plugin 'kana/vim-textobj-user'
-Plugin 'vim-scripts/django-template-textobjects'
 Plugin 'scrooloose/nerdtree'
-" Plugin 'nvie/vim-flake8'
 Plugin 'tpope/vim-ragtag'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 Plugin 'Shougo/neocomplcache.vim'
 Plugin 'terryma/vim-multiple-cursors'
-" Plugin 'tmhedberg/SimpylFold'
-" Bundle 'https://github.com/neilagabriel/vim-geeknote'
 Plugin 'scrooloose/nerdcommenter'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'majutsushi/tagbar'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+" Plugin 'vim-scripts/closetags'
+" Plugin 'nvie/vim-flake8'
+" Plugin 'tmhedberg/SimpylFold'
+" Bundle 'https://github.com/neilagabriel/vim-geeknote'
 " Bundle 'ntpeters/vim-better-whitespace' TODO
-" Bundle "jQuery"
+" Bundle 'jQuery'
+" Plugin 'tomtom/tlib_vim'   " snipmate
+" Plugin 'MarcWeber/vim-addon-mw-utils'  " snipmate
+" Plugin 'garbas/vim-snipmate'  " snipmate
+" Plugin 'honza/vim-snippets'  " snipmate
+" Plugin 'vadv/vim-chef'
+" Plugin 'vim-ruby/vim-ruby'
+" Plugin 'kana/vim-textobj-user'
+" Plugin 'vim-scripts/django-template-textobjects'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin indent on
@@ -54,6 +54,9 @@ filetype plugin indent on
 let g:jedi#use_tabs_not_buffers = 0
 let g:jedi#popup_on_dot = 0
 let g:jedi#auto_close_doc = 1
+" slow in venv
+let g:pymode_rope = 0
+let g:pymode_folding = 0
 " syntastics
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
