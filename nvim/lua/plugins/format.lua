@@ -1,4 +1,5 @@
-return { {
+return {
+  {
     "stevearc/conform.nvim",
     event = { "BufReadPre", "BufNewFile", "InsertLeave" },
     opts = {
@@ -16,7 +17,7 @@ return { {
         json = { "prettier" },
         lua = { "stylua" },
         markdown = { "prettier", "markdownlint-cli2" },
-        python = { "isort", "ruff_format" },
+        python = { "ruff_format" },
         sh = { "shfmt" },
         terraform = { "terraform_fmt" },
         ["terraform-vars"] = { "terraform_fmt" },
@@ -45,6 +46,5 @@ return { {
       end, { desc = "Toggling autoformat" })
       vim.keymap.set("n", "<leader>tF", "<cmd>ToggleAutoformat<cr>", { desc = "Toggle format on save" })
     end,
+  },
 }
-}
-
