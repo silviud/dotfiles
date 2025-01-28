@@ -79,8 +79,27 @@ return {
             },
           },
         },
+        jedi_language_server = {},
         marksman = {},
-        pyright = {},
+        -- pyright = {
+        --   cmd = { "pyright-langserver", "--stdio" },
+        --   settings = {
+        --     python = {
+        --       analysis = {
+        --         autoSearchPaths = true,
+        --         diagnosticMode = "openFilesOnly",
+        --         useLibraryCodeForTypes = true,
+        --       },
+        --     },
+        --   },
+        -- },
+        -- ruff = {
+        --   settings = {
+        --     logLevel = "debug",
+        --     -- configuration = "~/.config/ruff/global.toml",
+        --     configurationPreference = "filesystemFirst",
+        --   },
+        -- },
         terraformls = {},
         tinymist = {},
         yamlls = {

@@ -12,6 +12,7 @@ return {
       end,
       -- log_level = vim.log.levels.TRACE,
       formatters_by_ft = {
+        html = { "prettier" },
         go = { "goimports", "gofmt" },
         javascript = { "prettier" },
         json = { "prettier" },
@@ -21,7 +22,6 @@ return {
         sh = { "shfmt" },
         terraform = { "terraform_fmt" },
         ["terraform-vars"] = { "terraform_fmt" },
-        tex = { "latexindent" },
         toml = { "taplo" },
         typst = { "typstfmt" },
         yaml = { "yamlfmt" },

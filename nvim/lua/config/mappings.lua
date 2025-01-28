@@ -5,7 +5,7 @@ local function map(mode, l, r, opts)
 end
 
 -- Open Neotree
-map("n", "<leader>N", "<cmd>Neotree<cr>", { desc = "Open Neotree" })
+map("n", "<leader><tab>", "<cmd>Neotree<cr>", { desc = "Open Neotree" })
 
 -- Remap for dealing with visual line wraps
 map("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
