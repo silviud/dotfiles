@@ -30,6 +30,9 @@ Lsp [configs](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.m
 - html - `npm i -g vscode-langservers-extracted`
 - htmx - `cargo install htmx-lsp` (experimental)
 - python - `pip install -U jedi-language-server`
+- jinja2 - [jinja-lsp](https://github.com/uros-5/jinja-lsp/releases)
+  fails `./jinja-lsp-linux-x64: /lib/x86_64-linux-gnu/libc.so.6: version GLIBC_2.32' not found (required by ./jinja-lsp-linux-x64)`
+  need cargo install to build with rust
 
 ## Inspiration
 

@@ -102,6 +102,8 @@ return {
         -- },
         terraformls = {},
         tinymist = {},
+        html = {},
+        jinja_lsp = {},
         yamlls = {
           capabilities = {
             textDocument = {

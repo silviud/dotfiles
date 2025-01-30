@@ -36,3 +36,14 @@ o.undofile       = true                                            -- enable/dis
 o.undolevels     = 1000                                            -- number of changes that can be undone
 o.updatetime     = 250                                             -- faster completion
 -- stylua: ignore end
+
+-- jinja_lsp - https://github.com/uros-5/jinja-lsp/releases
+-- ./jinja-lsp-linux-x64: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.32' not found (required by ./jinja-lsp-linux-x64)
+-- vim.filetype.add({
+--   extension = {
+--     jinja = "jinja",
+--     jinja2 = "jinja",
+--     j2 = "jinja",
+--     html = "jinja",
+--   },
+-- })
